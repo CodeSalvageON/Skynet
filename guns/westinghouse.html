@@ -26,10 +26,10 @@
       let space = `
       `;
       
-      $("#westinghouse-form").submit(function (event) {
+      $("#westinghouse-form").submit(function () {
         event.preventDefault();
         
-        lowerWestingHouse = westinghouse_id.toLowerCase();
+        lowerWestingHouse = westinghouse_id.value.toLowerCase();
         
         if (lowerWestingHouse === "plasma") {
           westinghouse_pre.innerText += space + "Firing PLASMA!";
