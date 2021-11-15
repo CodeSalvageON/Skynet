@@ -26,7 +26,7 @@
       let space = `
       `;
       
-      $("#westinghouse-form").submit(function () {
+      $("#westinghouse-form").submit(function (event) {
         event.preventDefault();
         
         lowerWestingHouse = westinghouse_id.toLowerCase();
