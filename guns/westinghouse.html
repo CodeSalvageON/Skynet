@@ -17,11 +17,26 @@
     <form id="westinghouse-form">
       <pre>/ <input type="text" id="westinghouse-id"/></pre>
     </form>
+    <script src="https://codesalvageon.github.io/magichat/scripts/jquery.js"></script>
     <script>
       // A QUICK AND DIRTY WESTINGHOUSE TRICK
+      const westinghouse_id = document.getElementById("westinghouse-id");
+      const westinghouse_pre = document.getElementById("westinghouse-interface");
       
       let space = `
       `;
+      
+      $("#westinghouse-form").submit(function () {
+        event.preventDefault();
+        
+        lowerWestingHouse = westinghouse_id.toLowerCase();
+        
+        if (lowerWestingHouse === "plasma") {
+          westinghouse_pre.innerText += space + "Firing PLASMA!";
+        } 
+        
+        window.scrollTo(0, document.body.scrollHeight);
+      });
     </script>
   </body>
 </html>
