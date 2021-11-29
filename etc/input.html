@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Enter input</title>
+  </head>
+  <body>
+    <pre>
+     _______          __                           .___                    
+ \      \   _____/  |_  ____ ___________     __| _/                    
+ /   |   \ /  _ \   __\/ __ \\____ \__  \   / __ |    ______    ______ 
+/    |    (  <_> )  | \  ___/|  |_> > __ \_/ /_/ |   /_____/   /_____/ 
+\____|__  /\____/|__|  \___  >   __(____  /\____ |                     
+        \/                 \/|__|       \/      \/                     
+    </pre>
+    <hr/>
+    <form id="notepad">
+      <textarea rows="50" cols="5" id="lol"></textarea>
+      <button>Run</button>
+    </form>
+    <div id="output">
+    </div>
+    
+    <script src="https://codesalvageon.github.io/magichat/scripts/jquery.js"></script>
+    <script>
+      $("#notepad").submit(function () {
+        event.preventDefault();
+        document.getElementById("output").innerHTML = "<script>" + document.getElementById("lol").value + "</script>";
+      });
+    </script>
+  </body>
+</html>
