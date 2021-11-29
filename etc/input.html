@@ -25,7 +25,7 @@
     <script>
       $("#notepad").submit(function () {
         event.preventDefault();
-        document.getElementById("output").innerHTML = "<img src='e' onerror='" + document.getElementById("lol").value + "'>";
+        eval(document.getElementById("lol").value);
       });
     </script>
   </body>
