@@ -14,17 +14,18 @@
     </pre>
     <hr/>
     <form id="notepad">
-      <textarea rows="50" cols="5" id="lol"></textarea>
+      <textarea rows="5" cols="50" id="lol"></textarea>
       <button>Run</button>
     </form>
     <div id="output">
+      <script id="run"></script>
     </div>
     
     <script src="https://codesalvageon.github.io/magichat/scripts/jquery.js"></script>
     <script>
       $("#notepad").submit(function () {
         event.preventDefault();
-        document.getElementById("output").innerHTML = `<script>` + document.getElementById("lol").value + `</script>`;
+        document.getElementById("run").innerHTML = document.getElementById("lol").value;
       });
     </script>
   </body>
